@@ -10,8 +10,7 @@ import { AngularFireAuthModule} from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 
-import { RegisterPage } from './../pages/register/register';
-import { LoginPage } from './../pages/login/login';
+
 import { FIREBASE_CONFIG } from './app.firebase.config';
 
 @NgModule({

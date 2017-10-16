@@ -25,36 +25,16 @@ export class HomePage {
     this.afAuth.authState.subscribe(data => {
       if (data && data.email && data.uid) {
         this.toast.create({
-          message: `Welcome to APP_NAME, ${data.email}`,
+          message: `Bem vindo ao app da FixCar, ${data.email}`,
           duration: 3000
         }).present();
       }
       else {
         this.toast.create({
-          message: `Could not find authentication details.`,
+          message: `Não foi possível identificar os dados de login`,
           duration: 3000
         }).present();
       }
     })
   }
 }
-  
-  /*ionViewWillLoad(){
-    this.afAuth.authState.subscribe(data => {
-      if (data && data.email && data.uid){
-      this.toast.create({
-        message: `Bem vindo ao app da FixCar, ${data.email}`,
-        duration:3000
-      }).present();
-    }
-    else {
-      this.toast.create({
-        message: `Acesso não autorizado. Verifique os dados de autenticação`,
-        duration:3000
-      }).present();
-
-    }
-    })
-    }
-
-}*/
